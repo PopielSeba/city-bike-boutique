@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">B</span>
+                <span className="text-primary-foreground font-bold text-sm">K</span>
               </div>
-              <span className="text-xl font-bold">BikeCity</span>
+              <span className="text-xl font-bold">KupHolendra</span>
             </div>
             <p className="text-background/80 leading-relaxed">
               Twój niezawodny partner w świecie rowerów miejskich. 
@@ -75,15 +75,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span className="text-background/80">ul. Rowerowa 123, 00-001 Warszawa</span>
+                <span className="text-background/80">ul. Oławska 219, 55-220 Jelcz-Laskowice</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <span className="text-background/80">+48 123 456 789</span>
+                <span className="text-background/80">+48 500 600 525</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span className="text-background/80">info@bikecity.pl</span>
+                <span className="text-background/80">info@kupholendra.pl</span>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 mt-12 pt-8 text-center">
           <p className="text-background/60">
-            © 2024 BikeCity. Wszystkie prawa zastrzeżone.
+            © 2024 KupHolendra. Wszystkie prawa zastrzeżone.
           </p>
         </div>
       </div>

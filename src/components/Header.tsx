@@ -10,9 +10,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">B</span>
+              <span className="text-primary-foreground font-bold text-sm">K</span>
             </div>
-            <span className="text-xl font-bold text-foreground">BikeCity</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-black to-red-600 bg-clip-text text-transparent">KupHolendra</span>
           </Link>
 
           {/* Navigation */}

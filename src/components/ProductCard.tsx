@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Heart } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "@/components/ui/use-toast";
 
 interface ProductCardProps {
+  id: number;
   name: string;
   price: number;
   originalPrice?: number;
@@ -11,7 +14,14 @@ interface ProductCardProps {
   reviews: number;
 }
 
-const ProductCard = ({ name, price, originalPrice, image, rating, reviews }: ProductCardProps) => {
+const ProductCard = ({ id, name, price, originalPrice, image, rating, reviews }: ProductCardProps) => {
+  const { addItem } = useCart();
+  const handleAdd = () => {
+    addItem({ id, name, price, image });
+    try {
+      toast({ title: "Dodano do koszyka", description: name });
+    } catch {}
+  };
   return (
     <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
       <div className="relative overflow-hidden">
@@ -66,7 +76,7 @@ const ProductCard = ({ name, price, originalPrice, image, rating, reviews }: Pro
             </div>
           </div>
           
-          <Button variant="default" className="w-full">
+          <Button variant="default" className="w-full" onClick={handleAdd} aria-label={`Dodaj ${name} do koszyka`}>
             Dodaj do koszyka
           </Button>
         </div>

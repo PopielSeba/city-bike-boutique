@@ -9,26 +9,31 @@ import Czesci from "./pages/Czesci";
 import Akcesoria from "./pages/Akcesoria";
 import Pozostale from "./pages/Pozostale";
 import NotFound from "./pages/NotFound";
+import Koszyk from "./pages/Koszyk";
+import { CartProvider } from "./contexts/CartContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/rowery" element={<Rowery />} />
-          <Route path="/czesci" element={<Czesci />} />
-          <Route path="/akcesoria" element={<Akcesoria />} />
-          <Route path="/pozostale" element={<Pozostale />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <CartProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/rowery" element={<Rowery />} />
+            <Route path="/czesci" element={<Czesci />} />
+            <Route path="/akcesoria" element={<Akcesoria />} />
+            <Route path="/pozostale" element={<Pozostale />} />
+            <Route path="/koszyk" element={<Koszyk />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </CartProvider>
   </QueryClientProvider>
 );
 

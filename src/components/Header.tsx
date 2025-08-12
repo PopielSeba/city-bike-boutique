@@ -12,7 +12,7 @@ const Header = () => {
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">B</span>
             </div>
-            <span className="text-xl font-bold flex items-baseline gap-1"><span className="text-black">Kup</span><span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">Holendra</span></span>
+            <span className="text-2xl md:text-3xl font-bold flex items-baseline gap-1"><span className="text-black">Kup</span><span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">Holendra</span></span>
           </Link>
 
           {/* Navigation */}

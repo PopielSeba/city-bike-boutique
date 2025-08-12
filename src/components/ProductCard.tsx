@@ -27,8 +27,9 @@ const ProductCard = ({ id, name, price, originalPrice, image, rating, reviews }:
       <div className="relative overflow-hidden">
         <img
           src={image}
-          alt={name}
+          alt={`${name} – rower miejski`}
           className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          loading="lazy"
         />
         <Button 
           variant="ghost" 

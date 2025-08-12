@@ -10,6 +10,8 @@ import Akcesoria from "./pages/Akcesoria";
 import Pozostale from "./pages/Pozostale";
 import NotFound from "./pages/NotFound";
 import Koszyk from "./pages/Koszyk";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
 
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="/rowery" element={<Rowery />} />
           <Route path="/czesci" element={<Czesci />} />
           <Route path="/akcesoria" element={<Akcesoria />} />
